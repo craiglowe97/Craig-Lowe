@@ -1,4 +1,3 @@
-# Import required libraries
 import pandas as pd
 import dash
 import dash_html_components as html
@@ -26,9 +25,7 @@ airline_data =  pd.read_csv('https://cf-courses-data.s3.us.cloud-object-storage.
 year_list = [i for i in range(2005, 2021, 1)]
 
 """Compute graph data for creating yearly airline performance report 
-
 Function that takes airline data as input and create 5 dataframes based on the grouping condition to be used for plottling charts and grphs.
-
 Argument:
      
     df: Filtered dataframe
@@ -51,9 +48,7 @@ def compute_data_choice_1(df):
 
 
 """Compute graph data for creating yearly airline delay report
-
 This function takes in airline data and selected year as an input and performs computation for creating charts and plots.
-
 Arguments:
     df: Input airline data.
     
@@ -128,11 +123,14 @@ app.layout = html.Div(children=[ [html.H1('US Domestic Airline Flights Performan
                                 
                                 # TASK3: Add a division with two empty divisions inside. See above disvision for example.
                                 # Enter your code below. Make sure you have correct formatting.
-                               html.div([ ], id='plot4'),
-                               html.div([ ], id='plot5')
-                                ], style={'display': 'flex'}),
-                                ])
+                                html.Div([
+                                    html.Div([ ], id='plot4'),
+                                    html.Div([ ], id='plot5')
+                                ], style={'display': 'flex'})
 
+                                    
+
+                               
 # Callback function definition
 # TASK4: Add 5 ouput components
 # Enter your code below. Make sure you have correct formatting.
@@ -221,3 +219,4 @@ def get_graph(chart, year, children1, children2, c3, c4, c5):
 # Run the app
 if __name__ == '__main__':
     app.run_server()
+
