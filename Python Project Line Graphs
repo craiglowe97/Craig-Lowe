@@ -90,7 +90,7 @@ app.layout = html.Div(children=[html.H1('US Domestic Airline Flights Performance
                            {'label': 'Yearly Airline Delay Report', 'value': 'OPT2'}
                            ],
                   placeholder='Set a Report Type',
-                  style={'Width': '80%', 'padding':'3px', 'font-size':'20px', 'textAlign':'centre'})
+                  style={'width': '80%', 'padding':'3px', 'font-size':'20px', 'text-align-last':'centre'})
                                         
                                     # Place them next to each other using the division style
                                     ], style={'display':'flex'}),
